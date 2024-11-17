@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .sidebar-icon{
+        @apply relative flex items-center justify-center
+                h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+                bg-gray-800 text-purple-500
+                hover:bg-purple-700 hover:text-white hover:cursor-pointer
+                rounded-xl;
+    }
+
+    .sidebar-tooltip{
+        @apply absolute w-auto p-2 m-2 min-w-max left-14
+                rounded-md shadow-md
+                text-white bg-gray-900
+                text-xs font-semibold
+                transition-all duration-75 scale-0 origin-left;
+    }
+    .group:hover .sidebar-tooltip {
+        @apply scale-100;
+    }
+
+    .Botbar-icon{
+        @apply relative flex items-center justify-center
+                h-6 w-12 mt-2 mb-2 mx-auto shadow-lg ;
+    }
+
+    .Botbar-tooltip {
+        @apply absolute top-[-58px] w-auto p-2 m-2 min-w-max left-4 transform -translate-x-1/2
+                rounded-md shadow-md text-white bg-gray-900
+                text-xs font-semibold transition-all duration-75 scale-0 origin-bottom;
+    }
+
+    
+    .group:hover .Botbar-tooltip {
+        @apply scale-100;
+    }
+    
+    .botbar-vr {
+        @apply bg-gray-200 dark:bg-gray-800 
+        border border-gray-200 dark:border-gray-500 rounded-full
+        ;
+      }
+
+      
+}
